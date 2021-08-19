@@ -1,13 +1,12 @@
-package com.MicroServ.Controller;
+package com.example.microservice.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.MicroServ.Service.DeptServ;
+import com.example.microservice.Service.DeptServ;
 
 
 @RestController
@@ -23,7 +22,7 @@ public class DeptCont {
 		return deptServ.saveDept(department);
 	}*/
 	
-	@PostMapping("/")
+	@PostMapping("/save")
 	public String saveDepartment() {
 		return deptServ.saveDept();
 	}
